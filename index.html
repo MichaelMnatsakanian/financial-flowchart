@@ -1,57 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <form data-multi-step class="multi-step-form">
-    <div class="card" data-step>
-      <h3 class="step-title">This is step 1</h3>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <form data-multi-step class="multi-step-form" id="grad">
+
+      <div class="card" data-step>
+        <h3 class="step-title">
+          <br>
+          Welcome to the Financial Order of Operations Flowchart (FOOF)!
+        </h3> <br><hr/><br>
+        <p>According to Einstein:<br><br> <span class="italics">“<strong>Compound interest </strong>is the eighth wonder of the world. He who understands it, earns it … he who doesn&#39t … pays it.” </span> <br><br>  At first this quote might seem like a bit of an exaggeration but the math behind it shows that it is not. <br><br> Let&#39s see how best we can <span style="text-decoration:underline;">model your retirement timeline and how you can accelerate your path!</span></p> <br><hr/><br>
+        <h4 class="step-subtitle">
+          Are you Ready to Model & Accelerate Your Financial Journey?
+        </h3>
+        <div class="form-group">
+          <p>
+            <input class="yes-no-buttons" type="radio"
+            name="affirmative"
+            value="yes"
+            > Yes
+            </input>
+          </p>
+          <p>
+            <input type="radio"
+            name="negative"
+            value="no"> No - Take me directly to the FOOF!
+            </input>
+          </p>
+        </div>
+        <button type="button" data-next>Next - Begin Your Journey</button>
       </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
+
+      <div class="card" data-step>
+        <h3 class="step-title">
+          <br>
+          Let&#39s gather some of your basic financial data so we can provide you the best financial gameplan!
+        </h3> <br><hr/><br>
+        <p>Simply put, you can really only invest if your income is greater than your expenses. <br><br>
+          <span class="equation">
+            Savings = Income - Expenses
+          </span>
+          <br><br>
+          Although this might seem simple, this is the most common step potential savers/investors get caught up with. The act itself of saving is not challenging, however, the ability to have funds available after accounting for expenses is the challenge.
+
+          <br><br>
+
+          There are only <span style="text-decoration:underline;">2 real ways to increase your savings.</span> Either: <br><br>
+          <span class="equation">
+          1) Increase Your Income, or
+          <br><br>
+          2) Decrease Your Spending
+          </span>
+          <br><br>
+          This is obviously easier said than done.
+          <br><br>
+          Ultimately, it is your choice to decide which of these paths you will pursue. Or better yet, work towards doing both!
+        </p>
+
+        <br><hr/><br>
+        <h4 class="step-subtitle">
+          Let&#39s See Where You Are Starting Your Financial Journey From (Approximations are compelety fine & ignore taxes)
+        </h4>
+        <div class="form-group">
+          <label for="TCS">Current Total Cash Savings (TCS) </label>
+          <input type="number" name="TCS" id="TCS" />
+        </div>
+        <div class="form-group">
+          <label for="TIS">Current Total Invested Savings (TIS) </label>
+          <input type="number" name="TIS" id="TIS" />
+        </div>
+        <div class="form-group">
+          <label for="MInc">Monthly Income (MInc) </label>
+          <input type="number" name="MInc" id="MInc" />
+        </div>
+        <div class="form-group">
+          <label for="MSpe">Monthyl Spending (MSpe) </label>
+          <input type="number" name="MSpe" id="MSpe" />
+        </div>
+
+        <button type="button" data-previous>Previous</button>
+        <button type="button" data-next>Next - Calculate Your Savings Rate</button>
       </div>
-      <button type="button" data-next>Next</button>
-    </div>
-    <div class="card" data-step>
-      <h3 class="step-title">This is step 2</h3>
-      <div class="form-group">
-        <label for="address">Address</label>
-        <input type="text" name="address" id="address">
+
+      <div class="card" data-step>
+        <h3 class="step-title">
+          <br>
+          What is Your Savings Rate and Why Should You Care?
+        </h3> <br><hr/><br>
+        <p>Your Savings Rate (SR) is the foundation of your Financial Journey!<br><br>
+
+          You can&#39t invest what you don't have. You need to make sure that every month, <span style="text-decoration:underline;">your spending is lower than your income,</span> otherwise, you will have nothing leftover to save and invest.<br><br>
+
+          <hr /><span class="equation">
+            Monthly Savings (MS) = Income - Spending = MInc - MSpe
+            <br><br>
+            Monthly Savings Rate (MSR)= Savings / Income = MS / MInc
+          </span>
+          <hr/>
+          <br>
+
+          <p>As you can see below, on average since 2015, <strong>the personal savings rate for a U.S. adult hovers between 5% to 10%. </strong><br><br>
+          Yes, there was a significant spike in SRs as the Coronavirus Pandemic kicked-off. But that makes sense, right? <br><br>
+          Since your SR is simply a function of your income and spending, and the pandemic led to shutdowns of virtually everything, recreational spending significantly dropped while incomes stayed relatively flat. Thus, SRs temporarily spiked! <br><br> But as expected, SRs have already significantly declined and they have regressed back within their average range.</p>
+
+
+          <br>
+          <div class="image-container">
+            <a class="image" href="https://www.statista.com/statistics/246268/personal-savings-rate-in-the-united-states-by-month/" rel="nofollow"><img src="https://www.statista.com/graphic/1/246268/personal-savings-rate-in-the-united-states-by-month.jpg" alt="Statistic: Personal saving rate in the United States from June 2015 to June 2021 | Statista" style="width: 100%; height: auto !important; max-width:500px;-ms-interpolation-mode: bicubic;"/></a>
+          </div>
+
+        <br><hr/>
+        <h4 class="step-subtitle">
+          Let&#39s Calculate Your Monthly Savings (MS) and Monthly Savings Rate (MSR)!
+        </h4>
+        <span class="equation">
+          Monthly Savings (MS) = Income - Spending = MInc - MSpe =
+          <br><br>
+          Monthly Savings Rate (MSR)= Savings / Income = MS / MInc =
+        </span><hr /> <br><br>
+
+        <button type="button" data-previous>Previous</button>
+        <button type="button" data-next>Next - Build an Initial Emergency Fund</button>
       </div>
-      <div class="form-group">
-        <label for="city">City</label>
-        <input type="text" name="city" id="city">
+
+      <div class="card" data-step>
+        <h3 class="step-title">
+          <br>
+          Let&#39s Make Sure You Have an Initial Emergency Fund (IEF)!
+        </h3> <br><hr/><br>
+
+        <p>At minimum, you should have the equivalent of 1 month spending (MSpe) in your EF!<br><br>
+
+        This is an important first step to your savings journey as <span style="text-decoration:underline;"> you don't want one unexpected expense to put you into high-interest debt.</span><br><br>
+
+        <img src="http://www.jasonhoppe.com/uploads/5/8/0/2/58026421/screen-shot-2018-09-04-at-7-43-17-am_orig.png" alt="60% of U.S. Households would have to go into debt to cover a $1,000 unexpected debt" align="right" style="width: 150px; height: auto !important; max-width:500px;-ms-interpolation-mode: bicubic;" id="pie-chart"/>According to <a href="https://www.cnbc.com/2021/01/11/just-39percent-of-americans-could-pay-for-a-1000-emergency-expense.html">CNBC</a>, <strong>60% of U.S. households would have to go into debt to cover a $1,000 unexpected expense.</strong> Your IEF is going to be your thin cushion that should help you overcome one or two critical, yet unexpected expenses.
+
+        <br><br>
+
+        Your IEF is meant to cover things like unexpected vehicle repair costs or medical bills.
+
+        <br><br>This <strong>most definitely does not include</strong> things like going on a vacation, purchasing clothes, or any other spending that isn&#39t complely time sensitive and crucial.
+        <br><br> </p> <hr />
+
+        <span class="equation">
+          Initial Emergency Fund (IEF) = 1 Months Spending = 1 * MSpe
+          <br><br>
+          Months of Saving to Build IEF = Initial Emergency Fund / Monthly Savings = IEF / MSav
+        </span>
+        <hr /><br>
+
+        <p>Once fully funded, your IEF will be included in your Total Cash Savings (TCS). This part of your TCS should never be touched unless you are in an absolute emergency and desperate for cash.  <br><br>
+
+        If you already have greater than 1 MSpe in your TCS, then all you have to do is mentally allocate that amout as your IEF. Better yet, you can put it in a seperate account and never touch it unless it is absolutely necessary. <br><br>
+
+        Now that you have a little savings cushion, let&#39s start investing!
+        </p>
+
+        <button type="button" data-previous>Previous</button>
+        <button type="button" data-next>Next - Get Your 401(k) Match</button>
       </div>
-      <div class="form-group">
-        <label for="zipcode">Zip Code</label>
-        <input type="text" name="zipcode" id="zipcode">
+
+      <div class="card" data-step>
+        <h3 class="step-title">
+          <br>
+          Your Employer Sponsored 401(k) Match Is Your Best Investment!
+        </h3> <br><hr/><br>
+
+        <p>
+          As long as your employer offers a 401(k) match, that should ALWAYS be your first investment!<br><br>
+
+          Why? Well, over the last century, the <a href="https://www.nerdwallet.com/article/investing/average-stock-market-return">average annualized stock market return is 10%</a>.<br><br>
+
+          Want to know how to instantly 10X that? <strong>Get your Employer Sponsored 401(k) match!</strong> <span style="text-decoration:underline;"> Every dollar/percent that is matched by your employer is an automatic 100% return.</span> Whether your employer matches 3%, 5%, or 25% of your income, a dollar-for-dollar employer match is an instant 100% rate of return.<hr /><br>
+
+          Let&#39s break this down with an example: <br><br> If your monthly income is $1,000 and your employer has a 5% dollar-for-dollar match, then you should at minimum invest 5% of your income into your 401(k). Let&#39s see the numbers: <br><br>
+
+          <span class="equation">
+            Monthly Income = $1,000 <br>
+            Employer Match = 5% <br>
+            Your Minimum 401(k) Contribution = $1,000 * 5% = $50 <br>
+            Your Employer 401(k) Match = $50 <br>
+          </span><hr /> <br>
+
+          So how does this equal a 100% Rate of Return (RoR)? Well, let&#39s start with the RoR formula:
+          <br> <span class="equation">
+          Rate of Return (%) = [ (Final Value - Initial Value) / (Initial Value) ] * 100%
+          </span><br> <br>
+
+          For your 401(k) match example, the numbers are as follows:
+          <br>
+          <span class="equation">
+            Final Value = Your Contribution + Employer Contribution = $50 + $50 = $100 <br>
+            Initial Value = Your Contribution = $50 <br>
+            Rate of Return (%) = [ (Final Value - Initial Value) / (Initial Value) ] * 100% = [ (100 - 50) / 50 ] * 100 = [ 50 / 50 ] * 100 = 1 * 100 = 100%
+          </span><hr /><br>
+
+          Although all employer sponsored 401(k) match contributions are pre-tax (traditional), you should determine if it is more appropriate for you to place your contribution into a <a href="https://www.nerdwallet.com/article/investing/roth-401k#:~:text=A%20Roth%20401(k)%20is,withdrawals%20in%20retirement%20are%20taxable.">pre-tax (traditional) or post-tax (Roth) account</a>.
+        </p>
+
+        <button type="button" data-previous>Previous</button>
+        <button type="button" data-next>Next - Get Out of High Interest Debt</button>
       </div>
-      <button type="button" data-previous>Previous</button>
-      <button type="button" data-next>Next</button>
-    </div>
-    <div class="card" data-step>
-      <h3 class="step-title">This is step 3</h3>
-      <div class="form-group">
-        <label for="firstName">First Name</label>
-        <input type="text" name="firstName" id="firstName">
+
+      <div class="card" data-step>
+        <h3 class="step-title">
+          <br>
+          Let&#39s Knockout Any High-Interest Debt!
+        </h3> <br><hr/><br>
+
+        <p>
+          The Financial Order of Operations (FOOF) is based on 2 major concepts: <br> <strong>
+          1) Peace of Mind<br>
+          2) Getting the Highest Rate of Return </strong><br>
+          <br>
+
+          This is why the first few steps of the FOOF interchange between savings, investing, and debt paydown. <br><br>
+
+          Your savings are established to provide you peace of mind while you stay prepared for any unexpected emergencies. <br><br>
+
+          Whereas your investing and debt paydown are conducted to either return you the highest expected rate for every dollar invested or to guarantee you the highest savings of interest payments. <br><br>
+
+          When you think about it, after your guaranteed 401(k) match, investing and debt paydown are really two sides of the same coin. As Einstein referenced, <span style="text-decoration:underline;">you can either have compound interest work in your favor or work against you.</span> <br><br>
+
+          When you invest, you do so with the intention of getting compounding interest to work in your favor. Over the last century, <a href="https://www.nerdwallet.com/article/investing/average-stock-market-return">the annualized rate of return is 10%</a>.<br><br>
+
+          Who would have guessed - the threshold for high-interest debt is also 10%! Any debt or loan with an interest rate of 10% or higher is considered high interest. The one major difference, however, is that <strong>paying down high-interest debt has a guaranteed return </strong> whereas investment returns are much more volatile (especially over a short time horizon). <br><br>
+
+          So if you plan on making any more investments after your 401(k) match, make sure to pay off any and all high-interest debt first!
+        </p>
+
+        <button type="button" data-previous>Previous</button>
+        <button type="button" data-next>Next - Have A Full Emergency Fund</button>
       </div>
-      <div class="form-group">
-        <label for="lastName">Last Name</label>
-        <input type="text" name="lastName" id="lastName">
+
+      <div class="card" data-step>
+        <h3 class="step-title">
+          <br>
+          Let&#39s Get You a Full Emergency Fund (FEF)!
+        </h3> <br><hr/><br>
+
+        <p>Although 1 Months Spending (MSpe) was a good start to your Emergency Fund (EF), after knocking out all of the previous steps, your next goal should be to have a Full Emergency Fund (FEF)!<br><br>
+
+        The standard rule is that your FEF should be at least 6 MSpe. However, some people carry as high as 12 MSpe. Ultimately, this is your decision and it should be based on your specific circumstance. <br><br>
+
+        Somethings to consider on whether your FEF should be higher/lower include your job security, your debt obligations, and your level of risk tolerance. Honestly, you should base this on what level helps you sleep best at night! Are you willing to risk some returns for more security? Or do you want to maximize your returns with every last available dollar?<br><br>
+
+        Once again, just to reiterate, your EF is meant to cover things like unexpected vehicle repair costs, medical bills, or any other emergencies.<br><br>
+
+        Although we&#39ll get to it later, after you feel comfortable with your monthly investing contributions, you should have a seperate savings account for your fun items (travel, clothing,...). <strong>Never dip into your EF for recreational, unnecessary expenses.</strong> <br> <hr />
+
+        <span class="equation">
+          Full Emergency Fund (FEF) = 6-12 Months Spending = 6-12 * MSpe
+          <br><br>
+          Months of Saving to Build FEF = Full Emergency Fund / Monthly Savings = (FEF - IEF) / MSav
+        </span>
+        <hr /><br>
+
+        If you already have greater than 6-12 MSpe in your TCS designated for your EF, then all you have to do is mentally allocate that amout as your EF. Better yet, you can put it in a seperate account and never touch it unless it is absolutely necessary. <br><br>
+
+        Now that you have a very solid EF, let&#39s pay off any moderate interest debt and go full force into investing!
+        </p>
+
+        <button type="button" data-previous>Previous</button>
+        <button type="button" data-next>Next - Pay Off Moderate Interest Debt</button>
       </div>
-      <button type="button" data-previous>Previous</button>
-      <button type="submit">Submit</button>
-    </div>
-  </form>
-</body>
+
+      <div class="card" data-step>
+        <h3 class="step-title">This is step 3</h3>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" name="firstName" id="firstName" />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" name="lastName" id="lastName" />
+        </div>
+        <button type="button" data-previous>Previous</button>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
 </html>

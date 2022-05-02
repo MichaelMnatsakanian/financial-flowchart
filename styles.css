@@ -1,9 +1,22 @@
+#grad {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(128, 246, 95),
+    rgb(16, 155, 164)
+  );
+  height: auto;
+}
+
 .card {
-  background-color: white;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(247, 248, 246),
+    rgb(247, 231, 127)
+  );
   border: 1px solid #333;
-  border-radius: .5rem;
-  padding: .5rem;
-  max-width: 300px;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  max-width: 60%;
   margin: 0 auto;
   animation: fade 250ms ease-in-out forwards;
 }
@@ -11,8 +24,8 @@
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: .5rem;
-  gap: .25em;
+  margin-bottom: 0.5rem;
+  gap: 0.25em;
 }
 
 .form-group:last-child {
@@ -21,20 +34,24 @@
 
 .form-group > label {
   font-weight: bold;
-  font-size: .8em;
+  font-size: 0.8em;
   color: #333;
 }
 
 .form-group > input {
   border: 1px solid #333;
-  border-radius: .25em;
+  border-radius: 0.25em;
   font-size: 1rem;
-  padding: .25em;
+  padding: 0.25em;
 }
 
 .step-title {
   margin: 0;
   margin-bottom: 1rem;
+  text-align: center;
+}
+
+.step-subtitle {
   text-align: center;
 }
 
@@ -49,6 +66,26 @@
 
 .hide {
   display: none;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.equation {
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+}
+
+#pie-chart {
+  float: right;
+  margin: 0 0 0 15px;
 }
 
 @keyframes slide {
@@ -68,7 +105,7 @@
     opacity: 1;
   }
   50% {
-    transform: scale(.75);
+    transform: scale(0.75);
     opacity: 0;
   }
   100% {
